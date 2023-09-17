@@ -4,7 +4,11 @@ ex. create_phone_number(&[1,2,3,4,5,6,7,8,9,0]); // returns "(123) 456-7890"
 The returned format must be correct in order to complete this challenge.
 */
 
-use codewars_in_rust::concat_to_string;
+// use codewars_in_rust::concat_to_string;
+
+pub fn concat_to_string(slice: &[u8]) -> String {
+    slice.iter().map(|&x| x.to_string()).collect()
+}
 
 pub fn create_phone_number(numbers: &[u8]) -> String {
     let area: String = concat_to_string(&numbers[0..3]);
