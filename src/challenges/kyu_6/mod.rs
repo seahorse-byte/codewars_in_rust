@@ -35,7 +35,14 @@ Examples
 "[({})](]" =>  False
 */
 
-pub fn valid_braces(mut s: String) -> bool {
+// pub fn valid_braces(mut s: String) -> bool {
+//     for _ in 0..s.len() {
+//         s = s.replace("()", "").replace("[]", "").replace("{}", "");
+//     }
+//     s.len() == 0
+// }
+pub fn valid_braces(s: &str) -> bool {
+    let mut s = s.to_string();
     for _ in 0..s.len() {
         s = s.replace("()", "").replace("[]", "").replace("{}", "");
     }
