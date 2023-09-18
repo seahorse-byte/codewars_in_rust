@@ -16,28 +16,28 @@ pub fn create_phone_number(numbers: &[u8]) -> String {
 }
 
 // ----------------------------------------------------------------
-// FIND THE ODD INT KATA
+// VALID BRACES
 // ----------------------------------------------------------------
 /*
-Given an array of integers, find the one that appears an odd number of times.
-There will always be only one integer that appears an odd number of times.
+Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.
+
+This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea!
+
+All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
+
+What is considered Valid?
+A string of braces is considered valid if all braces are matched with the correct brace.
+Examples
+"(){}[]"   =>  True
+"([{}])"   =>  True
+"(}"       =>  False
+"[(])"     =>  False
+"[({})](]" =>  False
 */
 
-#[allow(dead_code)]
-pub fn find_it(_seq: &[i32]) -> i32 {
-    // let mut count = 0;
-    // let mut odd = 0;
-    // for i in 0..seq.len() {
-    //     for j in 0..seq.len() {
-    //         if seq[i] == seq[j] {
-    //             count += 1;
-    //         }
-    //     }
-    //     if count % 2 != 0 {
-    //         odd = seq[i];
-    //         break;
-    //     }
-    // }
-    // return odd;
-    todo!()
+pub fn valid_braces(mut s: String) -> bool {
+    for _ in 0..s.len() {
+        s = s.replace("()", "").replace("[]", "").replace("{}", "");
+    }
+    s.len() == 0
 }
