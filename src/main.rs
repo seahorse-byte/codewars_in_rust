@@ -1,4 +1,4 @@
-use crate::challenges::kyu_6::{create_phone_number, valid_braces};
+use crate::challenges::kyu_6::{create_phone_number, is_valid_walk, valid_braces};
 mod challenges;
 
 fn main() {
@@ -9,4 +9,8 @@ fn main() {
     // VALID BRACES KATA
     let braces = valid_braces("(){}[]");
     assert_eq!(braces, true);
+
+    // IS VALID WALK
+    let walk = is_valid_walk(&["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]);
+    assert_eq!(walk, true);
 }

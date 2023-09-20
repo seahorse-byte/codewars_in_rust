@@ -1,4 +1,4 @@
-use codewars_in_rust::{create_phone_number, valid_braces};
+use codewars_in_rust::{create_phone_number, is_valid_walk, valid_braces};
 
 #[test]
 fn test_create_phone_number() {
@@ -19,3 +19,6 @@ fn test_valid_braces() {
     assert_eq!(valid_braces(&"(}".to_string()), false);
     assert_eq!(valid_braces(&"[(])".to_string()), false);
 }
+
+#[test]
+fn test_is_valid_walk() {}
