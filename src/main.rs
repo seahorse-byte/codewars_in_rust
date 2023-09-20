@@ -7,6 +7,6 @@ fn main() {
     assert_eq!(create_phone_number(&[1, 2, 3, 4, 5, 6, 7, 8, 9, 9]), phone);
 
     // VALID BRACES KATA
-    let braces = valid_braces("(){}[]".to_string());
+    let braces = valid_braces("(){}[]");
     assert_eq!(braces, true);
 }

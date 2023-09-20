@@ -14,8 +14,8 @@ fn test_create_phone_number() {
 
 #[test]
 fn test_valid_braces() {
-    assert_eq!(valid_braces("(){}[]".to_string()), true);
-    assert_eq!(valid_braces("([{}])".to_string()), true);
-    assert_eq!(valid_braces("(}".to_string()), false);
-    assert_eq!(valid_braces("[(])".to_string()), false);
+    assert_eq!(valid_braces(&"(){}[]".to_string()), true);
+    assert_eq!(valid_braces(&"([{}])".to_string()), true);
+    assert_eq!(valid_braces(&"(}".to_string()), false);
+    assert_eq!(valid_braces(&"[(])".to_string()), false);
 }
