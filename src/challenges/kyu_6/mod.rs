@@ -58,7 +58,7 @@ pub fn valid_braces(s: &str) -> bool {
 Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 */
 
-pub fn is_valid_walk(array: &[&str]) -> bool {
+pub fn is_valid_walk(array: &[char]) -> bool {
     if array.len() != 10 {
         return false;
     }
@@ -68,10 +68,10 @@ pub fn is_valid_walk(array: &[&str]) -> bool {
 
     for &direction in array {
         match direction {
-            "n" => y += 1,
-            "s" => y -= 1,
-            "e" => x += 1,
-            "w" => x -= 1,
+            'n' => y += 1,
+            's' => y -= 1,
+            'e' => x += 1,
+            'w' => x -= 1,
             _ => (),
         }
     }

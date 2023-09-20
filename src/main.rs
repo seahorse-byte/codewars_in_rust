@@ -11,6 +11,6 @@ fn main() {
     assert_eq!(braces, true);
 
     // IS VALID WALK
-    let walk = is_valid_walk(&["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]);
+    let walk = is_valid_walk(&['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']);
     assert_eq!(walk, true);
 }
