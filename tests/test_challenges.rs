@@ -21,4 +21,11 @@ fn test_valid_braces() {
 }
 
 #[test]
-fn test_is_valid_walk() {}
+fn test_is_valid_walk() {
+    let walk = is_valid_walk(&["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]);
+    assert_eq!(walk, true);
+    let walk2 = is_valid_walk(&["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]);
+    assert_eq!(walk2, false);
+    let walk3 = is_valid_walk(&["w"]);
+    assert_eq!(walk3, false);
+}
